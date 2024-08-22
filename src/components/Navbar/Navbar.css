@@ -1,0 +1,25 @@
+.navlink {
+    cursor: pointer;
+    padding: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all 0.2s;
+    transition-property: transform;
+}
+
+.navlink:hover{
+    font-weight: 700;
+    font-size: medium;
+    text-underline-offset: 4px;
+    text-decoration: underline #fb923c;
+    text-decoration-thickness: 2px;
+}
+
+.active {
+    font-weight: 700;
+    font-size: large;
+    text-underline-offset: 4px;
+    text-decoration: underline #fb923c;
+    text-decoration-thickness: 2px;
+}
+
