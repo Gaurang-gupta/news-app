@@ -6,9 +6,7 @@ function Page() {
     const [data, setData] = useState([])
 
     const getData = async() => {
-        const dataFromApi = await fetch(`http://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_API_KEY}&countries=us%2Cin&limit=100&offset=0&sort=published_desc`, {
-            referrerPolicy: "unsafe-url" 
-        }).then(res => res.json()).then(data => setData(data))
+        const dataFromApi = await fetch(`https://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_API_KEY}&countries=us%2Cin&limit=100&offset=0&sort=published_desc`).then(res => res.json()).then(data => setData(data))
     }
 
     useEffect(() => {
@@ -25,9 +23,7 @@ function Page() {
 
     useEffect(() => {
         const getData = async () => {
-            const dataFromApi = await fetch(`http://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_API_KEY}&countries=us%2Cin&limit=100&offset=0&sort=published_desc&keywords=${search}`, {
-                referrerPolicy: "unsafe-url" 
-            }).then(res => res.json()).then(data => setData(data))
+            const dataFromApi = await fetch(`https://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_API_KEY}&countries=us%2Cin&limit=100&offset=0&sort=published_desc&keywords=${search}`).then(res => res.json()).then(data => setData(data))
         }
         getData()
     }, [search])
@@ -42,9 +38,7 @@ function Page() {
             }
             setSearch(myParam)
             if(myParam !== ""){
-                const dataFromApi = await fetch(`http://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_API_KEY}&countries=us%2Cin&limit=100&offset=0&sort=published_desc&categories=${myParam}`, {
-                    referrerPolicy: "unsafe-url" 
-                }).then(res => res.json()).then(data => setData(data))
+                const dataFromApi = await fetch(`https://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_API_KEY}&countries=us%2Cin&limit=100&offset=0&sort=published_desc&categories=${myParam}`).then(res => res.json()).then(data => setData(data))
             }
         }
 
